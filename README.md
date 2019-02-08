@@ -1,2 +1,1 @@
-# project5
-Basic instructions go here.
+We are team Fake News, section 68 in EECS 330.
