@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="algoliastuff.css" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
     <title>Fake-News</title>
   </head>
   <body>
     <div class="container text-center m-3 text-center mx-auto">
       <div class="title pb-3">
-        <h1 class="bg-light">Fake News</h1>
+        <h1 class="bg-light">Measure your bias!</h1>
       </div>
 		<svg id="biasMeter" width="900" height="100">
 			<defs>
@@ -70,6 +71,13 @@
         </div>
       </div>
     </div>  
+    <div class="searchbar">
+      <div class="container pt-5">
+        <h1 class="text-center bg-light">Search for the news sources you frequent!</h2>
+        <div id="searchbox" class="pt-4"></div>
+        <div id="hits" class="pt-3"></div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -77,8 +85,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  
-	<script src="https://d3js.org/d3.v5.min.js"></script>
-
-	<script src="javascript/index.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="javascript/index.js"></script>
+    <script src="javascript/app.js"></script>
   </body>
 </html>
