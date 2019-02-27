@@ -14,7 +14,9 @@ var index = client.initIndex('news_bias');
 index.setSettings({
   attributesToHighlight: ['*'],
   highlightPreTag: '<span>',
-  highlightPostTag: '</span>'
+  highlightPostTag: '</span>',
+  hitsPerPage: 8,
+  paginationLimitedTo: 8
 });
 
 const search = instantsearch({
@@ -33,7 +35,6 @@ const search = instantsearch({
 search.addWidget(
   instantsearch.widgets.hits({
     container: "#hits",
-    hitsPerPage: 10,
     templates: {
       empty: "No results.",
       item: function(hit) {
@@ -52,3 +53,48 @@ search.addWidget(
 );
 
 search.start();
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var scatterChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }],
+            yAxes: [{
+                    ticks: {
+                        min: 0,
+                        beginAtZero: true
+                    }
+                }]
+        },
+        legend: {
+            display: false
+         }
+    }
+});
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}

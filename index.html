@@ -70,19 +70,23 @@
           </div>
         </div>
       </div>
-    </div>  
-    <div class="searchbar">
-      <div class="container pt-5">
-        <h1 class="text-center bg-light">Search for the news sources you frequent!</h2>
-        <div id="searchbox" class="pt-4"></div>
-        <div id="hits" class="pt-3"></div>
+    </div>
+    <div class="container pt-3">
+      <h1 class="text-center bg-light">Search for the news sources you frequent!</h1>
+      <div class="row justify-content-md-center text-center mx-auto pt-3">
+        <div class="col-md-7 mx-auto">
+          <canvas id="myChart" width="100%" height="100%"></canvas>
+        </div>
+        <div class="col-md-5 mx-auto">
+          <div class="searchbar">
+            <div class="container pt-5">
+              <div id="searchbox"></div>
+              <div id="hits" class="pt-3"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="space pt-5 pb-5"></div>
-    <div class="space pt-5 pb-5"></div>
-    <div class="space pt-5 pb-5"></div>
-    <div class="space pt-5 pb-5"></div>
-    <div class="space pt-5 pb-5"></div>
     <div class="space pt-5 pb-5"></div>
 
     <!-- Optional JavaScript -->
@@ -94,6 +98,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="javascript/index.js"></script>
     <script src="javascript/app.js"></script>
   </body>
