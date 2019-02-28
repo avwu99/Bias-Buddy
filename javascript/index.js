@@ -7,7 +7,7 @@ sources = d3.selectAll(".source")
 //bias meter functions
 
 moveLeft = function() {
-    width = bm.attr("width")
+    width = 900
     bias_score = Math.max(-100, bias_score-20)
     bix1 = String((bias_score+100)/200*width*0.9 + width*0.05)
     bix2 = String((bias_score+100)/200*width*0.9 + width*0.05 + 20) 
@@ -16,7 +16,7 @@ moveLeft = function() {
 }
 
 moveCenter = function() {
-    width = bm.attr("width")
+    width = 900
     if (bias_score > 0) {
         bias_score = Math.max(0, bias_score-20)
     } else {
@@ -29,7 +29,7 @@ moveCenter = function() {
 }
 
 moveRight = function() {
-    width = bm.attr("width")
+    width = 900
     bias_score = Math.min(100, bias_score+20)
     bix1 = String((bias_score+100)/200*width*0.9 + width*0.05)
     bix2 = String((bias_score+100)/200*width*0.9 + width*0.05 + 20) 
