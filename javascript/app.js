@@ -19,6 +19,24 @@ function plotSource(news_source, horz_rank, vert_rank){
   addData(scatterChart, news_source, data, color)
 }
 
+var currentHits = [];
+
+function wipeCurrentHits(event) {
+  var x = event.which || event.keyCode; 
+  if (x != 13) {
+    currentHits = [];
+  }
+}
+
+function getSources(event) {
+  var x = event.which || event.keyCode; 
+  if (currentHits) {
+    if (x == 13) {  
+      plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
+    }
+  }
+}
+
 var client = algoliasearch('C2ZUSONNI6', '175bcd12d4a450b773d484e3a8f039dc');
 var index = client.initIndex('news_bias');
 
@@ -49,6 +67,7 @@ search.addWidget(
     templates: {
       empty: "No results.",
       item: function(hit) {
+        currentHits.push(hit);
         return hitTemplate(hit);
       }
     }

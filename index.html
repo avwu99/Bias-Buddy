@@ -80,7 +80,7 @@
         <div class="col-md-5 mx-auto">
           <div class="searchbar">
             <div class="container pt-5">
-              <div id="searchbox"></div>
+              <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
               <div id="hits" class="pt-3"></div>
             </div>
           </div>
