@@ -148,7 +148,6 @@ function addData(chart, label, data, color) {
 
 var myRainbow = new Rainbow();
 var numberOfItems = 89;
-var s = '';
 
 myRainbow.setNumberRange(1, numberOfItems);
 myRainbow.setSpectrum('blue', 'white', 'red');
