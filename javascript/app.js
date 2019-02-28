@@ -67,47 +67,60 @@ search.start();
 
 var ctx = document.getElementById("myChart").getContext('2d');
 var scatterChart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-        datasets: [{
-            label: 'Scatter Dataset',
-            data: []
-        }]
-    },
-    options: {
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'bottom',
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Left  🡨  Political Bias  🡪  Right',
-                  fontSize: 18
-                },
-                ticks: {
-                        max: 50,
-                        min: -50
-                    },
-            }],
-            yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Accuracy of Reporting',
-                        fontSize: 18
-                    },
-                    ticks: {
-                        max: 70,
-                        min: 0
-                    }
-                }]
+  type: 'scatter',
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'Scatter Dataset',
+      data: [],
+      pointRadius: 8,
+      pointHoverRadius: 8
+    }]
+  },
+  options: {
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          return data.labels[tooltipItem.index];
         },
-        legend: {
-            display: false
-        }
+      },
+      bodyFontSize: 15,
+      displayColors: false
+    },
+    scales: {
+      xAxes: [{
+        type: 'linear',
+        position: 'bottom',
+        scaleLabel: {
+          display: true,
+          labelString: 'Left  🡨  Political Bias  🡪  Right',
+          fontSize: 18
+        },
+        ticks: {
+          max: 50,
+          min: -50
+        },
+      }],
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'Accuracy of Reporting',
+          fontSize: 18
+        },
+        ticks: {
+          max: 70,
+          min: 0
+        },
+      }]
+    },
+    legend: {
+      display: false
     }
+  }
 });
 
 function addData(chart, label, data) {
-    chart.data.datasets[0].data.push(data);
-    chart.update();
+  chart.data.labels.push(label);
+  chart.data.datasets[0].data.push(data);
+  chart.update();
 }
