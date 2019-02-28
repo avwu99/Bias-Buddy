@@ -26,8 +26,8 @@ index.setSettings({
   attributesToHighlight: ['*'],
   highlightPreTag: '<span>',
   highlightPostTag: '</span>',
-  hitsPerPage: 8,
-  paginationLimitedTo: 8
+  hitsPerPage: 12,
+  paginationLimitedTo: 12
 });
 
 const search = instantsearch({
