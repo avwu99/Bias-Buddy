@@ -2,11 +2,22 @@ function hitTemplate(hit) {
   return `
     <div class="hit">
       <div class="hit-content">
-        <h4>${hit._highlightResult.News_Source.value}</h4>
+        <div onclick="plotSource(&quot;${hit.News_Source}&quot;, ${hit.Horizontal_Rank}, ${hit.Vertical_Rank})">
+          <h4>${hit._highlightResult.News_Source.value}</h4>
+        </div>
       </div>
     </div>
   `;
 }
+
+function plotSource(news_source, horz_rank, vert_rank){
+  data = {
+    x: horz_rank,
+    y: vert_rank
+  }
+  addData(scatterChart, news_source, data)
+}
+
 
 var client = algoliasearch('C2ZUSONNI6', '175bcd12d4a450b773d484e3a8f039dc');
 var index = client.initIndex('news_bias');
@@ -60,41 +71,43 @@ var scatterChart = new Chart(ctx, {
     data: {
         datasets: [{
             label: 'Scatter Dataset',
-            data: [{
-                x: -10,
-                y: 0
-            }, {
-                x: 0,
-                y: 10
-            }, {
-                x: 10,
-                y: 5
-            }]
+            data: []
         }]
     },
     options: {
         scales: {
             xAxes: [{
                 type: 'linear',
-                position: 'bottom'
+                position: 'bottom',
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Left  🡨  Political Bias  🡪  Right',
+                  fontSize: 18
+                },
+                ticks: {
+                        max: 50,
+                        min: -50
+                    },
             }],
             yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Accuracy of Reporting',
+                        fontSize: 18
+                    },
                     ticks: {
-                        min: 0,
-                        beginAtZero: true
+                        max: 70,
+                        min: 0
                     }
                 }]
         },
         legend: {
             display: false
-         }
+        }
     }
 });
 
 function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
+    chart.data.datasets[0].data.push(data);
     chart.update();
 }
