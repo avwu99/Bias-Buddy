@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="algoliastuff.css" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Fake-News</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
       <div class="title pb-3">
         <h1 class="bg-light">Measure your bias!</h1>
       </div>
-		<svg id="biasMeter" width="900" height="100">
+		<svg id="biasMeter" viewBox="0 0 900 100">
 			<defs>
 				<linearGradient id="svgGradient" x1="0%" x2="100%" y1="0%" y2="0%">
 					<stop class="start" offset="0%" stop-color="blue" stop-opacity="1"></stop>
@@ -24,21 +25,23 @@
 					<stop class="end" offset="100%" stop-color="red" stop-opacity="1"></stop>
 				</linearGradient>
 			</defs>
+      <text x="0%" y="20%">Left-leaning</text>
+      <text x="89%" y="20%">Right-leaning</text>
 			<rect x="0%" y="25%" width="100%" height="50%" style="stroke: black; stroke-width: 2; fill: url(&quot;#svgGradient&quot;);"></rect>
-			<polygon id="biasIndicator" points="450,75 460,90 440,90"></polygon>
+			<polygon id="biasIndicator" points="450,75 470,100 430,100"></polygon>
 		</svg>
     <div class="new-stories">
       <div class="container pt-3">
         <h2 class="text-center bg-light">National Emergency</h2>
         <div class="row justify-content-md-center text-center mx-auto">
           <div class="col-md-4 mx-auto">
-            <a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a>
+            <a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a> <span class="source">Vanity Fair</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://www.cnn.com/2019/02/18/politics/xavier-becerra-lawsuit-national-emergency/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">16 States File Lawsuit To Stop Trump's National Emergency Declaration</a>
+            <a href="https://www.cnn.com/2019/02/18/politics/xavier-becerra-lawsuit-national-emergency/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">16 States File Lawsuit To Stop Trump's National Emergency Declaration</a><span class="source">CNN</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a>
+            <a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a><span class="source">Fox News</span>
           </div>
         </div>
       </div>
@@ -46,13 +49,13 @@
         <h2 class="text-center bg-light">Bernie Sanders</h2>
         <div class="row justify-content-md-center text-center mx-auto">
           <div class="col-md-4 mx-auto">
-            <a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a>
+            <a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a><span class="source">Huffington Post</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://www.youtube.com/watch?v=YtN7EYEBsFI" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Bernie Sanders To Run For Us President In 2020</a>
+            <a href="https://www.youtube.com/watch?v=YtN7EYEBsFI" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Bernie Sanders To Run For Us President In 2020</a><span class="source">Al Jazeera</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://dailycaller.com/2019/02/19/florida-bernie-sanders-announcement/" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Florida Voters Sound Off On Bernie Sanders’ 2020 Announcement</a>
+            <a href="https://dailycaller.com/2019/02/19/florida-bernie-sanders-announcement/" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Florida Voters Sound Off On Bernie Sanders’ 2020 Announcement</a><span class="source">Daily Caller</span>
           </div>
         </div>
       </div>
@@ -60,18 +63,30 @@
         <h2 class="text-center bg-light">Brexit</h2>
         <div class="row justify-content-md-center text-center mx-auto">
           <div class="col-md-4 mx-auto">
-            <a href="https://www.theguardian.com/politics/2019/feb/19/leave-to-remain-the-voters-who-have-changed-their-minds-over-brexit" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Leave to remain? The voters who have changed their minds over Brexit</a>
+            <a href="https://www.theguardian.com/politics/2019/feb/19/leave-to-remain-the-voters-who-have-changed-their-minds-over-brexit" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Leave to remain? The voters who have changed their minds over Brexit</a><span class="source">The Guardian</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://edition.cnn.com/2019/02/07/uk/brexit-stalemate-labour-tusk-deal-gbr-intl/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Brexit Clock Is Ticking, as Opposition Throws Support Behind Potential Deal</a>
+            <a href="https://edition.cnn.com/2019/02/07/uk/brexit-stalemate-labour-tusk-deal-gbr-intl/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Brexit Clock Is Ticking, as Opposition Throws Support Behind Potential Deal</a><span class="source">CNN</span>
           </div>
           <div class="col-md-4 mx-auto">
-            <a href="https://www.dailymail.co.uk/news/article-6675361/May-braces-walk-Brexit-Hell-plans-slip-chaos.html" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">May braces to walk into Brexit 'Hell' as her plans slip into chaos</a>
+            <a href="https://www.dailymail.co.uk/news/article-6675361/May-braces-walk-Brexit-Hell-plans-slip-chaos.html" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">May braces to walk into Brexit 'Hell' as her plans slip into chaos</a><span class="source">Daily Mail</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="container pt-3">
+      
+      
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          <button type="button" class="btn btn-secondary text-center" id="toggleSourcesBtn" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="toggleSources()">
+            Show Sources
+          </button>
+          </div>
+        </div>
+      </div>
+      
+    <div class="container pt-5">
       <h1 class="text-center bg-light">Search for the news sources you frequent!</h1>
       <div class="row justify-content-md-center text-center mx-auto pt-3">
         <div class="col-md-7 mx-auto">
@@ -80,14 +95,17 @@
         <div class="col-md-5 mx-auto">
           <div class="searchbar">
             <div class="container pt-5">
-              <div id="searchbox"></div>
+              <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
               <div id="hits" class="pt-3"></div>
             </div>
           </div>
         </div>
       </div>
+    
     </div>
+    
     <div class="space pt-5 pb-5"></div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -99,6 +117,7 @@
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="javascript/rainbowvis.js"></script>
     <script src="javascript/index.js"></script>
     <script src="javascript/app.js"></script>
   </body>

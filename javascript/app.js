@@ -15,9 +15,27 @@ function plotSource(news_source, horz_rank, vert_rank){
     x: horz_rank,
     y: vert_rank
   }
-  addData(scatterChart, news_source, data)
+  color = colors[horz_rank + 44]
+  addData(scatterChart, news_source, data, color)
 }
 
+var currentHits = [];
+
+function wipeCurrentHits(event) {
+  var x = event.which || event.keyCode; 
+  if (x != 13) {
+    currentHits = [];
+  }
+}
+
+function getSources(event) {
+  var x = event.which || event.keyCode; 
+  if (currentHits) {
+    if (x == 13) {  
+      plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
+    }
+  }
+}
 
 var client = algoliasearch('C2ZUSONNI6', '175bcd12d4a450b773d484e3a8f039dc');
 var index = client.initIndex('news_bias');
@@ -49,6 +67,7 @@ search.addWidget(
     templates: {
       empty: "No results.",
       item: function(hit) {
+        currentHits.push(hit);
         return hitTemplate(hit);
       }
     }
@@ -74,7 +93,8 @@ var scatterChart = new Chart(ctx, {
       label: 'Scatter Dataset',
       data: [],
       pointRadius: 8,
-      pointHoverRadius: 8
+      pointHoverRadius: 8,
+      pointBackgroundColor: []
     }]
   },
   options: {
@@ -119,8 +139,21 @@ var scatterChart = new Chart(ctx, {
   }
 });
 
-function addData(chart, label, data) {
+function addData(chart, label, data, color) {
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data);
+  chart.data.datasets[0].pointBackgroundColor.push(color);
   chart.update();
+}
+
+var myRainbow = new Rainbow();
+var numberOfItems = 89;
+
+myRainbow.setNumberRange(1, numberOfItems);
+myRainbow.setSpectrum('blue', 'white', 'red');
+colors = [];
+
+for (var i = 1; i <= numberOfItems; i++) {
+    var hexColour = myRainbow.colourAt(i);
+    colors.push('#' + hexColour);
 }
