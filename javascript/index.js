@@ -1,6 +1,7 @@
 bi = d3.select("#biasIndicator")
 bm = d3.select("#biasMeter")
 bias_score = 0
+
 moveLeft = function() {
     width = bm.attr("width")
     bias_score = Math.max(-100, bias_score-20)

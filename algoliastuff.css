@@ -1,0 +1,14 @@
+.ais-search-box {
+  display: inline-block;
+  float: center;
+  width: 300px;
+  height: 35px;
+}
+
+.ais-search-box--magnifier {
+  margin-top: 7.5px;
+}
+
+.ais-search-box--reset svg{
+  margin-top: 7.5px;
+}
