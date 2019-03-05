@@ -11,8 +11,13 @@ svg {
 	background-color: #CD5C5C;
 }
 
-.profile-picture img{
+#profile-picture {
 	position: relative;
-	height: 40px;
-	left: 1880px;
+}
+
+#profile-picture img{
+	position: absolute;
+	top: 2.5px;
+	right: 10px;
+	height: 35px;
 }
