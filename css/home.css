@@ -1,0 +1,23 @@
+
+
+.head-bar {
+	height: 60px;
+	background-color: #CD5C5C;
+}
+
+.wrapper {
+	height: 900px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column {
+	flex: 50%;
+}
+
+.column img { 
+	vertical-align: middle;
+}

@@ -5,3 +5,14 @@ svg {
 .source {
 	display: none;
 }
+
+.head-bar {
+	height: 40px;
+	background-color: #CD5C5C;
+}
+
+.profile-picture img{
+	position: relative;
+	height: 40px;
+	left: 1880px;
+}
