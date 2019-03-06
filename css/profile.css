@@ -1,0 +1,12 @@
+.head-bar {
+	height: 26px;
+	background-color: #CD5C5C;
+}
+
+.profile-pic img{
+	height:15%;
+	width: 15%;
+	margin-top: 50px;
+	border: 1px solid black;
+	padding-bottom: 2px;
+}
