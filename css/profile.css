@@ -3,10 +3,23 @@
 	background-color: #CD5C5C;
 }
 
-.profile-pic img{
-	height:15%;
-	width: 15%;
-	margin-top: 50px;
-	border: 1px solid black;
-	padding-bottom: 2px;
+#profile-pic img{
+	height: 20%;
+	width: 20%;
+	border: 2px solid lightgrey;
+	padding-bottom: 1px;
+}
+
+#graph img{
+	height: 70%;
+	width: 70%;
+	border: 2px solid lightgrey;
+	margin-left: 200px;
+}
+
+#home img{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	height: 25px;
 }
