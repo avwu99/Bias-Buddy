@@ -1,3 +1,23 @@
+#reg-button {
+    width: 6em;
+    border: 2px solid black;
+    background: grey;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+a:hover {
+    color: white;
+    background: #CD5C5C;
+}
+
 svg {
 	margin-bottom: 10px;
 }
@@ -131,7 +151,7 @@ nav li #login-content {
   color: #fff;
 }
 
-#login #submit:hover,
+/*#login #submit:hover,
 #login #submit:focus {    
   background-color: #e97171;
   background-image: linear-gradient(top, #d14545, #e97171);
@@ -155,4 +175,4 @@ nav li #login-content {
   position: relative;
   top: 2px;
   right: 2px;
-}
+}*/
