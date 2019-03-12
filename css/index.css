@@ -16,7 +16,7 @@
     height: 26px;
 }
 
-a {
+#reg-button a {
     display: block;
     width: 100%;
     line-height: 2em;
@@ -25,10 +25,26 @@ a {
     border-radius: 5px;
     color: white;
 }
-a:hover {
+#reg-button a:hover {
     color: white;
     background: #CD5C5C;
 }
+
+#logout-button a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#logout-button a:hover {
+    color: white;
+    background: #CD5C5C;
+}
+
 
 svg {
 	margin-bottom: 10px;
