@@ -1,4 +1,8 @@
 
+.head-bar {
+  height: 50px;
+  background-color: #d4c9ff;
+}
 #reg-button {
     width: 6em;
     border: 2px solid black;
@@ -17,7 +21,7 @@ a {
 }
 a:hover {
     color: white;
-    background: #CD5C5C;
+    background: #d4c9ff;
 }
 
 /* @extend display-flex; */

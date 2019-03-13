@@ -27,7 +27,7 @@
 }
 #reg-button a:hover {
     color: white;
-    background: #CD5C5C;
+    background: #d4c9ff;
 }
 
 #logout-button a {
@@ -42,7 +42,7 @@
 
 #logout-button a:hover {
     color: white;
-    background: #CD5C5C;
+    background: #d4c9ff;
 }
 
 
@@ -56,7 +56,7 @@ svg {
 
 .head-bar {
 	height: 26px;
-	background-color: #CD5C5C;
+	background-color: #d4c9ff;
 }
 
 #profile-picture {
