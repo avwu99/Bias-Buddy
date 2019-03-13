@@ -94,7 +94,8 @@ var scatterChart = new Chart(ctx, {
       data: [],
       pointRadius: 8,
       pointHoverRadius: 8,
-      pointBackgroundColor: []
+      pointBackgroundColor: [],
+      pointBorderColor: '#666666'
     }]
   },
   options: {
@@ -113,10 +114,11 @@ var scatterChart = new Chart(ctx, {
         position: 'bottom',
         scaleLabel: {
           display: true,
-          labelString: 'Left  🡨  Political Bias  🡪  Right',
+          labelString: '          Liberal     🡨    Political Bias    🡪     Conservative',
           fontSize: 18
         },
         ticks: {
+          display: false,
           max: 50,
           min: -50
         },
@@ -128,6 +130,7 @@ var scatterChart = new Chart(ctx, {
           fontSize: 18
         },
         ticks: {
+          display: false,
           max: 70,
           min: 0
         },
