@@ -2,6 +2,10 @@ a:hover {
   background: #eee;
 }
 
+.source-graph {
+  display: none;
+}
+
 #reg-button {
     width: 6em;
     border: 2px solid black;
