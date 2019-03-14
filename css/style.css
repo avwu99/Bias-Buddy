@@ -10,6 +10,7 @@
     border: 2px solid black;
     background: grey;
     border-radius: 5px;
+    color: white;
 }
 a {
     display: block;

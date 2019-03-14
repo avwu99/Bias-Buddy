@@ -10,10 +10,13 @@
     border: 2px solid black;
     background: grey;
     border-radius: 5px;
-    position: absolute;
-    top: 0px;
+    position: relative;
+    top: -37px;
     right: 0px;
-    height: 26px;
+    height: 50px;
+    text-align: right;
+    padding-top: 5px;
+    margin-left: 92%;
 }
 
 #reg-button a {
@@ -38,6 +41,8 @@
     text-decoration: none;
     border-radius: 5px;
     color: white;
+    height: 48px;
+    margin-top: -6px;
 }
 
 #logout-button a:hover {
@@ -61,6 +66,13 @@ svg {
   position: relative;
 
 }
+#welcome{
+  position: relative;
+  text-align: right;
+  margin-right: 200px;
+  font-size: 25px;
+
+}
 
 #profile-picture {
 	position: relative;
@@ -68,9 +80,12 @@ svg {
 
 #profile-picture img{
 	position: absolute;
-	top: 0px;
+	top: -38px;
 	right: 120px;
-	height: 25px;
+	height: 50px;
+  background-color: #d4c9ff;
+  border-radius: 10px;
+  border: 2px solid black;
 }
 
 nav ul {
@@ -98,7 +113,8 @@ nav #signup a {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  height: 25px;
+  height: 40px;
+  margin-top: 10px;
   line-height: 25px;
   font-weight: bold;
   padding: 0 8px;
@@ -124,7 +140,7 @@ nav #signup a:hover {
 nav #login-content {
   display: none;
   position: absolute;
-  top: 24px;
+  top: 50px;
   right: 0;
   z-index: 999;    
   background: #fff;
