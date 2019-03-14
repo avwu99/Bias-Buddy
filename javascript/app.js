@@ -22,18 +22,23 @@ function plotSource(news_source, horz_rank, vert_rank){
 var currentHits = [];
 
 function wipeCurrentHits(event) {
+  currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
+  guide = document.getElementById("guide")
   var x = event.which || event.keyCode; 
   if (x != 13) {
     currentHits = [];
+  }
+  if (x == 8 && currentInput.length <= 1 ) {
+    guide.style.display = "block";
+  } else {
+    guide.style.display = "none";
   }
 }
 
 function getSources(event) {
   var x = event.which || event.keyCode; 
-  if (currentHits) {
-    if (x == 13) {  
-      plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
-    }
+  if (x == 13) {  
+    plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
   }
 }
 
