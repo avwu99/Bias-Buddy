@@ -79,16 +79,11 @@ svg {
 
 #profile-picture {
 	position: relative;
-  display: inline-block;
 }
 
 #profile-picture img{
-	position: absolute;
-	top: -28px;
 	height: 50px;
   background-color: #d4c9ff;
-  border-radius: 10px;
-  border: 2px solid black;
 }
 
 nav ul {
@@ -151,6 +146,7 @@ nav #login-content {
   padding: 15px;
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
   border-radius: 3px 0 3px 3px;
+  margin-top: 10px;
 }
 
 nav li #login-content {
