@@ -17,6 +17,8 @@
     text-align: right;
     padding-top: 5px;
     margin-left: 92%;
+    display: inline-block;
+    float: right;
 }
 
 #reg-button a {
@@ -71,17 +73,18 @@ svg {
   text-align: right;
   margin-right: 200px;
   font-size: 25px;
+  display: inline-block;
 
 }
 
 #profile-picture {
 	position: relative;
+  display: inline-block;
 }
 
 #profile-picture img{
 	position: absolute;
-	top: -38px;
-	right: 120px;
+	top: -28px;
 	height: 50px;
   background-color: #d4c9ff;
   border-radius: 10px;
