@@ -55,8 +55,11 @@ svg {
 }
 
 .head-bar {
-	height: 26px;
-	background-color: #d4c9ff;
+  height: 50px;
+  width: 100%;
+  background-color: #CDC9C9;
+  position: relative;
+
 }
 
 #profile-picture {
