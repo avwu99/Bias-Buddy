@@ -1,6 +1,8 @@
 .head-bar {
-	height: 26px;
-	background-color: #CD5C5C;
+  height: 50px;
+  width: 100%;
+  background-color: #CDC9C9;
+  position: relative;
 }
 
 #profile-pic img{
