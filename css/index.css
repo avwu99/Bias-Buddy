@@ -202,28 +202,26 @@ nav li #login-content {
   color: #fff;
 }
 
-/*#login #submit:hover,
-#login #submit:focus {    
-  background-color: #e97171;
-  background-image: linear-gradient(top, #d14545, #e97171);
-} 
-
-#login #submit:active {   
-  outline: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+#profile-pic img{
+  height: 20%;
+  width: 20%;
+  border: 2px solid lightgrey;
+  padding-bottom: 1px;
 }
 
-#login #submit::-moz-focus-inner {
-  border: none;
+#graph img{
+  height: 70%;
+  width: 70%;
+  border: 2px solid lightgrey;
+  margin-left: 200px;
 }
 
-#login label {
-  float: right;
-  line-height: 30px;
+#home img{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  height: 50px;
+  background-color: #d4c9ff;
+  border-radius: 10px;
+  border: 2px solid black;
 }
-
-#login label input {
-  position: relative;
-  top: 2px;
-  right: 2px;
-}*/

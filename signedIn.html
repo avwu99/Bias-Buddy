@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Fake-News</title>
+    <title>Bias Buddy!</title>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="signedIn.html"><h3>Bias Buddy</h3></a>
+      <h3 class="navbar-brand">Bias Buddy</h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,10 +22,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Bias Meter<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#" onclick="showBiasPage()">Bias Meter<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sources Graph</a>
+            <a class="nav-link" href="#" onclick="showSourceGraph()">Sources Graph</a>
           </li>
         </ul>
         <div><h4>Welcome, Cori!</h4></div>
@@ -37,23 +37,27 @@
         </div>
       </div>
     </nav>
-    <div class="container text-center m-3 text-center mx-auto">
-      <div class="title pb-3">
-        <h1 class="bg-light">Measure your bias!</h1>
+
+    <div class="bias-page">
+      <div class="container text-center m-3 text-center mx-auto">
+        <div class="title pb-3">
+          <h1 class="bg-light">Measure your bias!</h1>
+        </div>
+        <svg id="biasMeter" viewBox="0 0 900 100">
+          <defs>
+            <linearGradient id="svgGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+              <stop class="start" offset="0%" stop-color="blue" stop-opacity="1"></stop>
+              <stop offset="50%" stop-color="white" stop-opacity="1"></stop>
+              <stop class="end" offset="100%" stop-color="red" stop-opacity="1"></stop>
+            </linearGradient>
+          </defs>
+          <text x="0%" y="20%">Liberal</text>
+          <text x="89%" y="20%">Conservative</text>
+          <rect x="0%" y="25%" width="100%" height="50%" style="stroke: black; stroke-width: 2; fill: url(&quot;#svgGradient&quot;);"></rect>
+          <polygon id="biasIndicator" points="450,75 470,100 430,100"></polygon>
+        </svg>
+        <div>Click on articles you find interesting. The overall bias of those articles will be reflected in the bias meter above.</div>
       </div>
-		<svg id="biasMeter" viewBox="0 0 900 100">
-			<defs>
-				<linearGradient id="svgGradient" x1="0%" x2="100%" y1="0%" y2="0%">
-					<stop class="start" offset="0%" stop-color="blue" stop-opacity="1"></stop>
-					<stop offset="50%" stop-color="white" stop-opacity="1"></stop>
-					<stop class="end" offset="100%" stop-color="red" stop-opacity="1"></stop>
-				</linearGradient>
-			</defs>
-      <text x="0%" y="20%">Left-leaning</text>
-      <text x="89%" y="20%">Right-leaning</text>
-			<rect x="0%" y="25%" width="100%" height="50%" style="stroke: black; stroke-width: 2; fill: url(&quot;#svgGradient&quot;);"></rect>
-			<polygon id="biasIndicator" points="450,75 470,100 430,100"></polygon>
-		</svg>
     <div class="new-stories">
       <div class="container pt-3">
         <h2 class="text-center bg-light">National Emergency</h2>
@@ -98,7 +102,7 @@
         </div>
       </div>
     </div>
-    <div class="container pt-4">
+    <div class="container pt-4 text-center">
       <div class="row">
         <div class="col">
         <button type="button" class="btn btn-secondary text-center" id="toggleSourcesBtn" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="toggleSources()">
@@ -107,6 +111,10 @@
         </div>
       </div>
     </div>  
+  </div>
+
+
+  <div class="source-graph">
     <div class="container pt-4">
       <h1 class="text-center bg-light">Search for the news sources you frequent!</h1>
       <div class="row justify-content-md-center text-center mx-auto pt-3">
@@ -124,6 +132,7 @@
       </div>
     
     </div>
+  </div>
     
     <div class="space pt-5 pb-5"></div>
 
