@@ -35,8 +35,6 @@
           </li>
         </ul>
       </nav>
-
-
     </div>
     <div class="container text-center m-3 text-center mx-auto">
       <div class="title pb-3">
@@ -116,7 +114,7 @@
         </div>
         <div class="col-md-5 mx-auto">
           <div class="searchbar">
-            <div class="container pt-5">
+            <div class="container pt-4">
               <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
               <div id="guide" class="pt-4 pl-4 pr-4">
                 <h6>In the search box above, find the news sources that you most frequently use. Selected sources will be plotted with respect to political bias and factual reporting.</h6>
@@ -128,6 +126,8 @@
                 <h4 class="example" onclick="testExamples(&quot;Huffington Post&quot;)">Huffington Post</h4>
                 <h4 class="example" onclick="testExamples(&quot;New York Times&quot;)">New York Times</h4>
                 <h4 class="example" onclick="testExamples(&quot;Wall Street Journal&quot;)">Wall Street Journal</h4>
+                <div class="pt-3"></div>
+                <button class="btn btn-secondary text-center" onclick="clearGraph()">Clear Graph</button>
               </div>
               <div id="hits" class="pt-3"></div>
             </div>
@@ -138,7 +138,6 @@
     </div>
     
     <div class="space pt-3 pb-3"></div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

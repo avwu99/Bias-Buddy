@@ -168,6 +168,13 @@ function addData(chart, label, data, color) {
   chart.update();
 }
 
+function clearGraph() {
+  scatterChart.data.labels = [];
+  scatterChart.data.datasets[0].data = [];
+  scatterChart.data.datasets[0].pointBackgroundColor = [];
+  scatterChart.update();
+}
+
 var myRainbow = new Rainbow();
 var numberOfItems = 89;
 
