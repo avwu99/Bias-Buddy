@@ -13,20 +13,34 @@
     <title>Fake-News</title>
   </head>
   <body>
-    <div class="head-bar">
-      <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><h3>Bias Buddy</h3></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bias Meter<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sources Graph</a>
+          </li>
+        </ul>
+        <nav>
         <ul>
           <li id="login">
             <a id="login-trigger" href="#">
               Log in <span>▼</span>
             </a>
             <div id="login-content">
-              <form>
+              <form action="signedIn.html">
                 <fieldset id="inputs">
-                  <input id="username" type="email" name="Email" placeholder="Your email address" required>   
-                  <input id="password" type="password" name="Password" placeholder="Password" required>
+                  <input id="username" type="email" name="Email" placeholder="Your email address" required minlength="1">   
+                  <input id="password" type="password" name="Password" placeholder="Password" required minlength="1">
                 </fieldset>
-                <div id="reg-button"><a href="signedIn.html">Log In</a></div>
+                <button id="reg-button"><a>Log In</a></button>
               </form>
             </div>                     
           </li>
@@ -35,8 +49,9 @@
           </li>
         </ul>
       </nav>
-    </div>
-
+      </div>
+    </nav>
+  </div>
     <div class="bias-page">
       <div class="container text-center m-3 text-center mx-auto">
         <div class="title pb-3">
