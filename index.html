@@ -21,12 +21,12 @@
               Log in <span>▼</span>
             </a>
             <div id="login-content">
-              <form>
+              <form action="signedIn.html">
                 <fieldset id="inputs">
-                  <input id="username" type="email" name="Email" placeholder="Your email address" required>   
-                  <input id="password" type="password" name="Password" placeholder="Password" required>
+                  <input id="username" type="email" name="Email" placeholder="Your email address" required minlength="1">   
+                  <input id="password" type="password" name="Password" placeholder="Password" required minlength="1">
                 </fieldset>
-                <div id="reg-button"><a href="signedIn.html">Log In</a></div>
+                <button id="reg-button"><a>Log In</a></button>
               </form>
             </div>                     
           </li>
