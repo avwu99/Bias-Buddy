@@ -12,3 +12,11 @@
 .ais-search-box--reset svg{
   margin-top: 7.5px;
 }
+
+.ais-hits:hover{
+  cursor: pointer;
+}
+
+.example:hover{
+  cursor: pointer;
+}

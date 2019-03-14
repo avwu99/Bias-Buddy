@@ -10,6 +10,12 @@ function hitTemplate(hit) {
   `;
 }
 
+function testExamples(news_source){
+  index.search({ query: news_source }).then(res => {
+  plotSource(res.hits[0].News_Source, res.hits[0].Horizontal_Rank, res.hits[0].Vertical_Rank);
+  });
+}
+
 function plotSource(news_source, horz_rank, vert_rank){
   data = {
     x: horz_rank,
@@ -22,18 +28,31 @@ function plotSource(news_source, horz_rank, vert_rank){
 var currentHits = [];
 
 function wipeCurrentHits(event) {
+  currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
+  guide = document.getElementById("guide");
   var x = event.which || event.keyCode; 
   if (x != 13) {
     currentHits = [];
   }
+  if (x == 8 && currentInput.length <= 1 ) {
+    guide.style.display = "block";
+  } else {
+    guide.style.display = "none";
+  }
 }
 
+//guide also displayed here, because keydown does not account for control + A then delete
+//due to the length of the input before delete being greater than 1
+//able to display guide via keyup, but slight lag time
 function getSources(event) {
+  currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
+  guide = document.getElementById("guide");
+  if (!currentInput && guide.style.display == "none") {
+    guide.style.display = "block";
+  }
   var x = event.which || event.keyCode; 
-  if (currentHits) {
-    if (x == 13) {  
-      plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
-    }
+  if (x == 13) {  
+    plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
   }
 }
 
@@ -94,7 +113,8 @@ var scatterChart = new Chart(ctx, {
       data: [],
       pointRadius: 8,
       pointHoverRadius: 8,
-      pointBackgroundColor: []
+      pointBackgroundColor: [],
+      pointBorderColor: '#666666'
     }]
   },
   options: {
@@ -113,10 +133,11 @@ var scatterChart = new Chart(ctx, {
         position: 'bottom',
         scaleLabel: {
           display: true,
-          labelString: 'Left  🡨  Political Bias  🡪  Right',
+          labelString: '          Liberal     🡨    Political Bias    🡪     Conservative',
           fontSize: 18
         },
         ticks: {
+          display: false,
           max: 50,
           min: -50
         },
@@ -128,6 +149,7 @@ var scatterChart = new Chart(ctx, {
           fontSize: 18
         },
         ticks: {
+          display: false,
           max: 70,
           min: 0
         },
@@ -139,11 +161,47 @@ var scatterChart = new Chart(ctx, {
   }
 });
 
+scatterChart.tooltip._active = [];
+
 function addData(chart, label, data, color) {
   chart.data.labels.push(label);
   chart.data.datasets[0].data.push(data);
   chart.data.datasets[0].pointBackgroundColor.push(color);
   chart.update();
+  displayLabel();
+}
+
+function clearGraph() {
+  scatterChart.data.labels = [];
+  scatterChart.data.datasets[0].data = [];
+  scatterChart.data.datasets[0].pointBackgroundColor = [];
+  scatterChart.update();
+}
+
+function displayLabel() {
+  if(scatterChart.tooltip._active.length != 0) {
+    closeTip();
+  }
+  indexx = scatterChart.getDatasetMeta(0).data.length - 1;
+  openTip(indexx);
+}
+
+function openTip(pointIndex){
+  var activeElements = scatterChart.tooltip._active;
+  var requestedElem = scatterChart.getDatasetMeta(0).data[pointIndex];
+  activeElements.push(requestedElem);
+  scatterChart.tooltip._active = activeElements;
+  scatterChart.tooltip.update(true);
+  scatterChart.draw();
+}
+
+function closeTip(){
+  var activeElements = scatterChart.tooltip._active;
+  if(activeElements.length == 0)
+   return;
+  scatterChart.tooltip._active = [];
+  scatterChart.tooltip.update(true);
+  scatterChart.draw();
 }
 
 var myRainbow = new Rainbow();
@@ -157,3 +215,4 @@ for (var i = 1; i <= numberOfItems; i++) {
     var hexColour = myRainbow.colourAt(i);
     colors.push('#' + hexColour);
 }
+

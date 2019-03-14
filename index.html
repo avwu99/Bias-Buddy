@@ -130,26 +130,38 @@
 
   <div class="source-graph">
     <div class="container pt-4">
-      <h1 class="text-center bg-light">Search for the news sources you frequent!</h1>
-      <div class="row justify-content-md-center text-center mx-auto pt-3">
+      <h1 class="text-center bg-light">News Source Bias Evaluation</h1>
+      <div class="row justify-content-md-center text-center mx-auto pt-5">
         <div class="col-md-7 mx-auto">
           <canvas id="myChart" width="100%" height="100%"></canvas>
         </div>
         <div class="col-md-5 mx-auto">
-          <div class="searchbar">
-            <div class="container pt-5">
+          <div id="searchbar">
+            <div class="container pt-4">
               <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
+              <div id="guide" class="pt-4 pl-4 pr-4">
+                <h6>In the search box above, find the news sources that you most frequently use. Selected sources will be plotted with respect to political bias and factual reporting.</h6>
+                <h6 class="pt-2 pb-2">Here are some common examples:</h6>
+                <h4 class="example" onclick="testExamples(&quot;AP&quot;)">Associated Press</h4>
+                <h4 class="example" onclick="testExamples(&quot;BuzzFeed News&quot;)">BuzzFeed News</h4>
+                <h4 class="example" onclick="testExamples(&quot;CNN&quot;)">CNN</h4>
+                <h4 class="example" onclick="testExamples(&quot;Fox&quot;)">Fox News</h4>
+                <h4 class="example" onclick="testExamples(&quot;Huffington Post&quot;)">Huffington Post</h4>
+                <h4 class="example" onclick="testExamples(&quot;New York Times&quot;)">New York Times</h4>
+                <h4 class="example" onclick="testExamples(&quot;Wall Street Journal&quot;)">Wall Street Journal</h4>
+                <div class="pt-3"></div>
+                <button class="btn btn-secondary text-center" onclick="clearGraph()">Clear Graph</button>
+              </div>
               <div id="hits" class="pt-3"></div>
             </div>
           </div>
         </div>
       </div>
-    
+      <p class="pt-5 font-weight-light">All data is freely taken from Ad Fontes Media, a Public Benefit Corporation (PBC) of Colorado founded in 2018. Ad Fontes Media makes no revenue from advertisements, solely relying on donations and sales of licenses. It should be noted that Ad Fontes Media is not a "nonpartisan fact tank," so users should be appropriately cautious. Click <a href="https://www.adfontesmedia.com/about/">here</a> to read Ad Fontes Media's defense of their methodology and decide for yourself.</p>
     </div>
   </div>
     
-    <div class="space pt-5 pb-5"></div>
-
+    <div class="space pt-3 pb-3"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
