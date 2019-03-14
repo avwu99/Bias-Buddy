@@ -52,3 +52,13 @@ toggleSources = function() {
         sources.style("display","none")
     }
 }
+
+showSourceGraph = function() {
+    d3.select(".bias-page").style("display","none")
+    d3.select(".source-graph").style("display","block")
+}
+
+showBiasPage = function() {
+    d3.select(".bias-page").style("display","block")
+    d3.select(".source-graph").style("display","none")
+}
