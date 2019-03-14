@@ -166,6 +166,7 @@ function addData(chart, label, data, color) {
   chart.data.datasets[0].data.push(data);
   chart.data.datasets[0].pointBackgroundColor.push(color);
   chart.update();
+  displayLabel();
 }
 
 function clearGraph() {
@@ -173,6 +174,32 @@ function clearGraph() {
   scatterChart.data.datasets[0].data = [];
   scatterChart.data.datasets[0].pointBackgroundColor = [];
   scatterChart.update();
+}
+
+function displayLabel() {
+  indexx = scatterChart.getDatasetMeta(0).data.length - 1;
+  openTip(indexx);
+  setTimeout(function(){ closeTip(); }, 2000);
+}
+
+function openTip(pointIndex){
+  if(scatterChart.tooltip._active == undefined)
+    scatterChart.tooltip._active = []
+  var activeElements = scatterChart.tooltip._active;
+  var requestedElem = scatterChart.getDatasetMeta(0).data[pointIndex];
+  activeElements.push(requestedElem);
+  scatterChart.tooltip._active = activeElements;
+  scatterChart.tooltip.update(true);
+  scatterChart.draw();
+}
+
+function closeTip(){
+  var activeElements = scatterChart.tooltip._active;
+  if(activeElements == undefined || activeElements.length == 0)
+   return;
+  scatterChart.tooltip._active = [];
+  scatterChart.tooltip.update(true);
+  scatterChart.draw();
 }
 
 var myRainbow = new Rainbow();
