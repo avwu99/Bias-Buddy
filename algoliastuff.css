@@ -16,3 +16,7 @@
 .ais-hits:hover{
   cursor: pointer;
 }
+
+.example:hover{
+  cursor: pointer;
+}

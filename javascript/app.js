@@ -10,6 +10,12 @@ function hitTemplate(hit) {
   `;
 }
 
+function testExamples(news_source){
+  index.search({ query: news_source }).then(res => {
+  plotSource(res.hits[0].News_Source, res.hits[0].Horizontal_Rank, res.hits[0].Vertical_Rank);
+  });
+}
+
 function plotSource(news_source, horz_rank, vert_rank){
   data = {
     x: horz_rank,
@@ -36,7 +42,7 @@ function wipeCurrentHits(event) {
 }
 
 //guide also displayed here, because keydown does not account for control + A then delete
-//due to the length of the input before being deleted being greater than 1
+//due to the length of the input before delete being greater than 1
 //able to display guide via keyup, but slight lag time
 function getSources(event) {
   currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
