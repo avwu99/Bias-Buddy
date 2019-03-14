@@ -62,3 +62,7 @@ showBiasPage = function() {
     d3.select(".bias-page").style("display","block")
     d3.select(".source-graph").style("display","none")
 }
+
+if (window.location.href.includes("source-graph")) {
+    showSourceGraph()
+}
