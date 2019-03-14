@@ -23,7 +23,7 @@ var currentHits = [];
 
 function wipeCurrentHits(event) {
   currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
-  guide = document.getElementById("guide")
+  guide = document.getElementById("guide");
   var x = event.which || event.keyCode; 
   if (x != 13) {
     currentHits = [];
@@ -35,7 +35,15 @@ function wipeCurrentHits(event) {
   }
 }
 
+//guide also displayed here, because keydown does not account for control + A then delete
+//due to the length of the input before being deleted being greater than 1
+//able to display guide via keyup, but slight lag time
 function getSources(event) {
+  currentInput = document.getElementsByClassName("ais-search-box--input")[0].value;
+  guide = document.getElementById("guide");
+  if (!currentInput && guide.style.display == "none") {
+    guide.style.display = "block";
+  }
   var x = event.which || event.keyCode; 
   if (x == 13) {  
     plotSource(currentHits[0].News_Source, currentHits[0].Horizontal_Rank, currentHits[0].Vertical_Rank);
