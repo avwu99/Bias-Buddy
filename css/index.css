@@ -1,3 +1,7 @@
+a:hover {
+  background: #eee;
+}
+
 #reg-button {
     width: 6em;
     border: 2px solid black;
