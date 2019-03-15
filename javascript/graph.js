@@ -1,10 +1,15 @@
 
 new Chart(document.getElementById("lineChart"),{
 	"type":"line",
-	"data":{"labels":["January","February","March","April","May","June","July"],
-	"datasets":[{"label":"My First Dataset",
-	"data":[65,59,80,81,56,55,40],
-	"fill":false,"borderColor":"rgb(75, 192, 192)",
-	"lineTension":0.1}]},
+	"data":{"labels":["January","February","March","April","May","June","July","August","September"],
+	"datasets":[{"label":"Conservative",
+	"data":[12,15,11,8,5,10,7,9,4],
+	"fill":false,"borderColor":"rgb(255, 0, 0)",
+	"lineTension":0.25},
+	{"label":"Liberal",
+	"data":[7,9,11,8,12,15,18,13,9],
+	"fill":false,"borderColor":"rgb(0, 0, 255)",
+	"lineTension":0.25}]},
 	"options":{}
 });
+

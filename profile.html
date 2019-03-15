@@ -35,24 +35,25 @@
         </div>
       </div>
     </nav>
-  	<div class="container text-center m-3 text-center mx-auto">
-	  	<div id="profile-pic">
-	  		<img src="images/profilePic.png"></img>
-	  	</div>
+  	<div class="row">
+      <div class="col-5">
+  	  	<div id="profile-pic">
+  	  		<img src="images/profilePic.png"></img>
+  	  	</div>
+      </div>
+      <div class="col-4">
+        <div id="articles">
+          <h3>Recently Viewed</h3>
+          <a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a>
+          <a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a>
+          <a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a>
+        </div>
+      </div>
 	</div>
-	<div class="row">
-		<div class="col-7"> 	
 		 	<div id="graph">
-		  		<canvas id="lineChart" height="100" width="100"></canvas>
-		  	</div>
-		 </div>
-		<div class="col-2">
-			<h3>Recently Viewed</h3>
-			<a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a>
-			<a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a>
-			<a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a>
-		</div>
-	</div>
+		  		<canvas id="lineChart"></canvas>
+		  </div>
+
 
 
 
