@@ -41,12 +41,12 @@
 	  	</div>
 	</div>
 	<div class="row">
-		<div class="col-6"> 	
+		<div class="col-7"> 	
 		 	<div id="graph">
-		  		<img src="images/ExGraph.png"></img>
+		  		<canvas id="lineChart" height="100" width="100"></canvas>
 		  	</div>
 		 </div>
-		<div class="col-3">
+		<div class="col-2">
 			<h3>Recently Viewed</h3>
 			<a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a>
 			<a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a>
@@ -55,18 +55,13 @@
 	</div>
 
 
+
   	<!-- Optional JS -->
   	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="javascript/login.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="javascript/rainbowvis.js"></script>
-    <script src="javascript/index.js"></script>
-    <script src="javascript/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="javascript/graph.js"></script>
   </body>
 </html>
