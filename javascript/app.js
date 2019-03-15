@@ -180,26 +180,29 @@ function clearGraph() {
 
 function displayLabel() {
   if(scatterChart.tooltip._active.length != 0) {
-    closeTip();
+    scatterChart.tooltip._active = [];
   }
-  indexx = scatterChart.getDatasetMeta(0).data.length - 1;
-  openTip(indexx);
+  index1 = scatterChart.getDatasetMeta(0).data.length - 1;
+  var requestedElem = scatterChart.getDatasetMeta(0).data[index1];
+  openTip(requestedElem);
+  setTimeout(function(){ closeTip(requestedElem); }, 2000);
 }
 
-function openTip(pointIndex){
-  var activeElements = scatterChart.tooltip._active;
-  var requestedElem = scatterChart.getDatasetMeta(0).data[pointIndex];
-  activeElements.push(requestedElem);
-  scatterChart.tooltip._active = activeElements;
+function openTip(requestedElem){
+  scatterChart.tooltip._active.push(requestedElem);
   scatterChart.tooltip.update(true);
   scatterChart.draw();
 }
 
-function closeTip(){
+function closeTip(requestedElem){
   var activeElements = scatterChart.tooltip._active;
   if(activeElements.length == 0)
    return;
-  scatterChart.tooltip._active = [];
+  if(!activeElements.includes(requestedElem)){
+    return;
+  }
+  index2 = activeElements.indexOf(requestedElem);
+  scatterChart.tooltip._active.pop(index2);
   scatterChart.tooltip.update(true);
   scatterChart.draw();
 }
@@ -215,4 +218,3 @@ for (var i = 1; i <= numberOfItems; i++) {
     var hexColour = myRainbow.colourAt(i);
     colors.push('#' + hexColour);
 }
-
