@@ -212,7 +212,7 @@ nav li #login-content {
   width: 300px;
   border: 2px solid lightgrey;
   padding-bottom: 1px;
-  margin-left: 250px;
+  margin-left: 300px;
   margin-top: 30px;
 }
 
@@ -220,6 +220,7 @@ nav li #login-content {
   position: relative;
   margin-left: 100px;
   margin-top: 30px;
+  text-align: center;
 }
 
 #graph{
