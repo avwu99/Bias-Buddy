@@ -10,6 +10,29 @@ new Chart(document.getElementById("lineChart"),{
 	"data":[7,9,11,8,12,15,18,13,9],
 	"fill":false,"borderColor":"rgb(0, 0, 255)",
 	"lineTension":0.25}]},
-	"options":{}
+	"options":{scales: {
+            	yAxes: [{
+                	ticks: {
+                	    beginAtZero:true
+                	},
+                	scaleLabel: {
+	                     display: true,
+	                     labelString: 'Number of Articles Read',
+	                     fontSize: 20 
+	                  }
+	            }],
+	            xAxes: [{
+	            	ticks: {
+                	},
+                	scaleLabel: {
+	                     display: true,
+	                     labelString: 'Month',
+	                     fontSize: 20 
+	                  }
+
+	            }]           
+	        } 
+
+		}
 });
 
