@@ -1,3 +1,19 @@
+showSourceGraph = function() {
+    d3.select(".bias-page").style("display","none")
+    d3.select(".source-graph").style("display","block")
+}
+
+showBiasPage = function() {
+    d3.select(".bias-page").style("display","block")
+    d3.select(".source-graph").style("display","none")
+}
+
+if (window.location.href.includes("source-graph")) {
+    showSourceGraph()
+} else {
+    showBiasPage()
+}
+
 bi = d3.select("#biasIndicator")
 bm = d3.select("#biasMeter")
 bias_score = 0
@@ -51,18 +67,4 @@ toggleSources = function() {
         toggleSourcesBtn.html("Show Sources")
         sources.style("display","none")
     }
-}
-
-showSourceGraph = function() {
-    d3.select(".bias-page").style("display","none")
-    d3.select(".source-graph").style("display","block")
-}
-
-showBiasPage = function() {
-    d3.select(".bias-page").style("display","block")
-    d3.select(".source-graph").style("display","none")
-}
-
-if (window.location.href.includes("source-graph")) {
-    showSourceGraph()
 }

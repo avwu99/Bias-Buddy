@@ -2,6 +2,10 @@ a:hover {
   background: #eee;
 }
 
+.bias-page {
+  display: none;
+}
+
 .source-graph {
   display: none;
 }
