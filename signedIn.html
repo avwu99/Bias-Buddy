@@ -13,12 +13,11 @@
     <title>Bias Buddy!</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <h3 class="navbar-brand">Bias Buddy</h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -37,10 +36,9 @@
         </div>
       </div>
     </nav>
-
     <div class="bias-page">
       <div class="container text-center m-3 text-center mx-auto">
-        <div class="title pb-3">
+        <div class="title pt-2">
           <h1 class="bg-light">Measure your bias!</h1>
         </div>
         <svg id="biasMeter" viewBox="0 0 900 100">
@@ -58,84 +56,94 @@
         </svg>
         <div>Click on articles you find interesting. The overall bias of those articles will be reflected in the bias meter above.</div>
       </div>
-    <div class="new-stories">
-      <div class="container pt-3">
-        <h2 class="text-center bg-light">National Emergency</h2>
-        <div class="row justify-content-md-center text-center mx-auto">
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a> <span class="source">Vanity Fair</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.cnn.com/2019/02/18/politics/xavier-becerra-lawsuit-national-emergency/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">16 States File Lawsuit To Stop Trump's National Emergency Declaration</a><span class="source">CNN</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a><span class="source">Fox News</span>
-          </div>
-        </div>
-      </div>
-      <div class="container pt-3">
-        <h2 class="text-center bg-light">Bernie Sanders</h2>
-        <div class="row justify-content-md-center text-center mx-auto">
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a><span class="source">Huffington Post</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.youtube.com/watch?v=YtN7EYEBsFI" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Bernie Sanders To Run For Us President In 2020</a><span class="source">Al Jazeera</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://dailycaller.com/2019/02/19/florida-bernie-sanders-announcement/" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Florida Voters Sound Off On Bernie Sanders’ 2020 Announcement</a><span class="source">Daily Caller</span>
+      <div class="new-stories">
+        <div class="container pt-3">
+          <h2 class="text-center bg-light">National Emergency</h2>
+          <div class="row justify-content-md-center text-center mx-auto">
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.vanityfair.com/news/2019/02/trump-allies-lindsey-graham-stephen-miller-struggle-to-defend-made-up-national-emergency" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Trump Allies Struggle To Defend His Totally Real, Definitely-not-made-up National Emergency</a> <span class="source">Vanity Fair</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.cnn.com/2019/02/18/politics/xavier-becerra-lawsuit-national-emergency/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">16 States File Lawsuit To Stop Trump's National Emergency Declaration</a><span class="source">CNN</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.foxnews.com/opinion/trump-forced-to-declare-emergency-because-of-congressional-apathy-negligence-and-incompetence" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Trump Forced To Declare Emergency Because Of Congressional Apathy, Negligence And Incompetence</a><span class="source">Fox News</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container pt-3">
-        <h2 class="text-center bg-light">Brexit</h2>
-        <div class="row justify-content-md-center text-center mx-auto">
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.theguardian.com/politics/2019/feb/19/leave-to-remain-the-voters-who-have-changed-their-minds-over-brexit" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Leave to remain? The voters who have changed their minds over Brexit</a><span class="source">The Guardian</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://edition.cnn.com/2019/02/07/uk/brexit-stalemate-labour-tusk-deal-gbr-intl/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Brexit Clock Is Ticking, as Opposition Throws Support Behind Potential Deal</a><span class="source">CNN</span>
-          </div>
-          <div class="col-md-4 mx-auto">
-            <a href="https://www.dailymail.co.uk/news/article-6675361/May-braces-walk-Brexit-Hell-plans-slip-chaos.html" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">May braces to walk into Brexit 'Hell' as her plans slip into chaos</a><span class="source">Daily Mail</span>
+        <div class="container pt-3">
+          <h2 class="text-center bg-light">Bernie Sanders</h2>
+          <div class="row justify-content-md-center text-center mx-auto">
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.huffpost.com/entry/bernie-sanders-supporters-right-choice-2020_n_5c6c3c33e4b0867082dee72c" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Why Bernie Sanders’ Supporters Say He’s Still The Right Choice For 2020</a><span class="source">Huffington Post</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.youtube.com/watch?v=YtN7EYEBsFI" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Bernie Sanders To Run For Us President In 2020</a><span class="source">Al Jazeera</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://dailycaller.com/2019/02/19/florida-bernie-sanders-announcement/" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">Florida Voters Sound Off On Bernie Sanders’ 2020 Announcement</a><span class="source">Daily Caller</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container pt-4 text-center">
-      <div class="row">
-        <div class="col">
-        <button type="button" class="btn btn-secondary text-center" id="toggleSourcesBtn" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="toggleSources()">
-          Show Sources
-        </button>
-        </div>
-      </div>
-    </div>  
-  </div>
-
-
-  <div class="source-graph">
-    <div class="container pt-4">
-      <h1 class="text-center bg-light">Search for the news sources you frequent!</h1>
-      <div class="row justify-content-md-center text-center mx-auto pt-3">
-        <div class="col-md-7 mx-auto">
-          <canvas id="myChart" width="100%" height="100%"></canvas>
-        </div>
-        <div class="col-md-5 mx-auto">
-          <div class="searchbar">
-            <div class="container pt-5">
-              <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
-              <div id="hits" class="pt-3"></div>
+        <div class="container pt-3">
+          <h2 class="text-center bg-light">Brexit</h2>
+          <div class="row justify-content-md-center text-center mx-auto">
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.theguardian.com/politics/2019/feb/19/leave-to-remain-the-voters-who-have-changed-their-minds-over-brexit" class="btn text-primary" role="button" onclick="moveLeft()" target="_blank">Leave to remain? The voters who have changed their minds over Brexit</a><span class="source">The Guardian</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://edition.cnn.com/2019/02/07/uk/brexit-stalemate-labour-tusk-deal-gbr-intl/index.html" class="btn text-muted" role="button" onclick="moveCenter()" target="_blank">Brexit Clock Is Ticking, as Opposition Throws Support Behind Potential Deal</a><span class="source">CNN</span>
+            </div>
+            <div class="col-md-4 mx-auto">
+              <a href="https://www.dailymail.co.uk/news/article-6675361/May-braces-walk-Brexit-Hell-plans-slip-chaos.html" class="btn text-danger" role="button" onclick="moveRight()" target="_blank">May braces to walk into Brexit 'Hell' as her plans slip into chaos</a><span class="source">Daily Mail</span>
             </div>
           </div>
         </div>
       </div>
-    
+      <div class="container pt-4 text-center">
+        <div class="row">
+          <div class="col">
+          <button type="button" class="btn btn-secondary text-center" id="toggleSourcesBtn" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="toggleSources()">
+            Show Sources
+          </button>
+          </div>
+        </div>
+      </div>  
     </div>
-  </div>
-    
-    <div class="space pt-5 pb-5"></div>
-
+    <div class="source-graph">
+      <div class="container pt-4">
+        <h1 class="text-center bg-light">News Source Bias Evaluation</h1>
+        <div class="row justify-content-md-center text-center mx-auto pt-5">
+          <div class="col-md-7 mx-auto">
+          <canvas id="myChart" width="100%" height="100%"></canvas>
+          </div>
+          <div class="col-md-5 mx-auto">
+            <div id="searchbar">
+              <div class="container pt-4">
+                <div id="searchbox" onkeydown="wipeCurrentHits(event)" onkeyup="getSources(event)"></div>
+                <div id="guide" class="pt-4 pl-4 pr-4">
+                  <h6>In the search box above, find the news sources that you most frequently use. Selected sources will be plotted with respect to political bias and factual reporting.</h6>
+                  <h6 class="pt-2 pb-2">Here are some common examples:</h6>
+                  <h4 class="example" onclick="testExamples(&quot;AP&quot;)">Associated Press</h4>
+                  <h4 class="example" onclick="testExamples(&quot;BuzzFeed News&quot;)">BuzzFeed News</h4>
+                  <h4 class="example" onclick="testExamples(&quot;CNN&quot;)">CNN</h4>
+                  <h4 class="example" onclick="testExamples(&quot;Fox&quot;)">Fox News</h4>
+                  <h4 class="example" onclick="testExamples(&quot;Huffington Post&quot;)">Huffington Post</h4>
+                  <h4 class="example" onclick="testExamples(&quot;New York Times&quot;)">New York Times</h4>
+                  <h4 class="example" onclick="testExamples(&quot;Wall Street Journal&quot;)">Wall Street Journal</h4>
+                  <div class="pt-3"></div>
+                  <button class="btn btn-secondary text-center" onclick="clearGraph()">Clear Graph</button>
+                </div>
+                <div id="hits" class="pt-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 pb-3"></div>
+        <p class="text-center font-weight-light">All data is freely taken from Ad Fontes Media, a Public Benefit Corporation (PBC) of Colorado founded in 2018. Ad Fontes Media makes no revenue from advertisements, solely relying on donations and sales of licenses. It should be noted that Ad Fontes Media is not a "nonpartisan fact tank," so users should be appropriately cautious. Click <a href="https://www.adfontesmedia.com/about/">here</a> to read Ad Fontes Media's defense of their methodology and decide for yourself.</p>
+      </div>
+    </div>
+    <div class="space pt-2 pb-2"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -150,7 +158,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="javascript/rainbowvis.js"></script>
     <script src="javascript/index.js"></script>
-    <script src="javascript/app.js"></script>
     <script src="javascript/main.js"></script>
+    <script src="javascript/app.js"></script>
   </body>
 </html>
